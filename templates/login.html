@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Login</h1>
+  <form action="" method="post">
+    <fieldset class="form-group">
+      <label for="exampleInputEmail1">Usename</label>
+      <input type="text" class="form-control" name="username" id="exampleInputEmail1" value="{{request.form.username}}" placeholder="Username">
+      <small class="text-muted">We'll never share your email with anyone else.</small>
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" value="{{request.form.password}}" placeholder="Password">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
